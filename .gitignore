@@ -29,7 +29,5 @@ _testmain.go
 
 # IntelliJ project files
 .idea
-*.iml
 out
 gen
-.idea/
