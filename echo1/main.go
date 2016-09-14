@@ -2,8 +2,8 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 )
 
 const separator string = " "
