@@ -9,15 +9,15 @@ func FToC(f Fahrenheit) Celsius {
 }
 
 func KToC(k Kelvin) Celsius {
-	return Celsius(k + AbsoluteZeroC)
+	return Celsius(k - 273.15)
 }
 
 func KToF(k Kelvin) Fahrenheit {
-	return Fahrenheit(k*9/5 + AbsoluteZeroF)
+	return Fahrenheit(k*9/5 - 459.67)
 }
 
 func CToK(c Celsius) Kelvin {
-	return Kelvin(c - AbsoluteZeroC)
+	return Kelvin(c + AbsoluteZeroC)
 }
 
 func FToK(f Fahrenheit) Kelvin {
