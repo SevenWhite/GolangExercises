@@ -11,21 +11,21 @@ func main() {
 	printer(squares)
 }
 
-func counter(out chan int) {
+func counter(out chan<- int) {
 	for i := 0; i < 10; i++ {
 		out <- i
 	}
 	close(out)
 }
 
-func squarer(in chan int, out chan int) {
+func squarer(in <-chan int, out chan<- int) {
 	for number := range in {
 		out <- number * number
 	}
 	close(out)
 }
 
-func printer(in chan int) {
+func printer(in <-chan int) {
 	for number := range in {
 		fmt.Println(number)
 	}
