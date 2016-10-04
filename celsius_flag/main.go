@@ -33,7 +33,7 @@ func CreateCelsiusFlag(name string, value Celsius, usage string) *Celsius {
 	return &f.Celsius
 }
 
-var temperature = CreateCelsiusFlag("t", Celsius(23), "temperature (Celsius)")
+var temperature = CreateCelsiusFlag("t", 20, "temperature (Celsius)")
 
 func main() {
 	flag.Parse()
